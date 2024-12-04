@@ -4,18 +4,22 @@ public class Vetores {
 
 
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+
+
 
         int[] vetor = new int[5];
 
         for (int i = 0; i < 5; i++) {
             System.out.print("Digite um valor: ");
-            vetor[i] = teclado.nextInt();
-
+            vetor[i] = scanner.nextInt();
         }
-        System.out.println("Lista dos valores digitados:");
-        for (int i = 0; i < 5; i++) {
-            System.out.println(vetor[i] + " ");
+        int i = 0;
+        System.out.println("Vetor: ");
+        while (i < 5) {
+            System.out.println(vetor[i]);
+            i++;
         }
-    }
+        scanner.close();
+      }
 }
