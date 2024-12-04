@@ -5,9 +5,11 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
+        boolean run = true;
 
-        System.out.println("Digite um numero: ");
-        double num1 = scanner.nextDouble();
+        while (run) {
+            System.out.println("Digite um numero: ");
+            double num1 = scanner.nextDouble();
 
         System.out.println("Digite outro numero: ");
         double num2 = scanner.nextDouble();
@@ -43,14 +45,25 @@ public class Main {
                 } else {
                     System.out.println("Error: Não é possivel dividir por zero");
 
-                }
-                break;
-            default:
-                operacaoValida = false;
-                System.out.println("Erro Operação invalida");
-                break;
+                    }
+                    break;
+                default:
+                    operacaoValida = false;
+                    System.out.println("Erro Operação invalida");
+                    break;
+            }
+
+            System.out.println("Deseja continuar? (s/n)");
+            String resposta = scanner.next();
+
+            if (resposta.equalsIgnoreCase("n")) {
+                run = false;  // Encerra o laço
+                System.out.println("Saindo...");
+            } else if (!resposta.equalsIgnoreCase("s")) {
+
+                System.out.println("Resposta inválida. Por favor, digite 's' para sim ou 'n' para não.");
+            }
         }
         scanner.close();
     }
-
 }
