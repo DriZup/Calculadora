@@ -7,7 +7,6 @@ public class Vetores {
         Scanner scanner = new Scanner(System.in);
 
 
-
         int[] vetor = new int[5];
 
         for (int i = 0; i < 5; i++) {
@@ -15,11 +14,12 @@ public class Vetores {
             vetor[i] = scanner.nextInt();
         }
         int i = 0;
+
         System.out.println("Vetor: ");
-        while (i < 5) {
+        do {
             System.out.println(vetor[i]);
             i++;
-        }
+        } while (i < 5);
         scanner.close();
-      }
+    }
 }
